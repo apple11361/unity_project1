@@ -46,9 +46,42 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Particle_Dissolve_Shader\Scripts\HUDFPS.cs" />
+     <Compile Include="Assets\Particle_Dissolve_Shader\Scripts\PDS_GameController.cs" />
+     <Compile Include="Assets\Particle_Dissolve_Shader\Scripts\ScrollingUVs_PDS.cs" />
+     <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
+     <Compile Include="Assets\script\boom.cs" />
      <Compile Include="Assets\script\building.cs" />
+     <Compile Include="Assets\script\bullet.cs" />
      <Compile Include="Assets\script\camera.cs" />
      <Compile Include="Assets\script\cube.cs" />
+     <Compile Include="Assets\script\light.cs" />
+     <Compile Include="Assets\script\sight.cs" />
+     <Compile Include="Assets\script\webcam_view.cs" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\Dissolve_Alpha_Additive_Opacity_softrim.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\DissolveSoft_Alpha_Additive_Opacity_softrim.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\DissolveSoft_Alpha_Additive_softrim.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\DissolveSoft_Alpha_Unlit.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\softrim\Particle_softrim_alpha.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\unity5\Particle_Softrim_Dissolve_alpha.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\Dissolve_Alpha_Unlit_Opacity.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\Dissolve_Alpha_Unlit.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\DissolveSoft_Alpha_Additive.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\Dissolve_Alpha_Additive_softrim.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\Dissolve_Alpha_Unlit_softrim.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\softrim\Particle_softrim_add_stretch.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\DissolveSoft_Alpha_Unlit_Opacity_softrim.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\DissolveSoft_Alpha_Unlit_softrim.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\unity5\Particle_Softrim_Dissolve_additive.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\Dissolve_Alpha_Additive_Opacity.shader" />
+     <None Include="Assets\Galaxia Sprite Pack #1\README.txt" />
+     <None Include="Assets\Particle_Dissolve_Shader\ReadMe.txt" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\Dissolve_Alpha_Unlit_Opacity_softrim.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\softrim\Particle_softrim_alpha_stretch.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\DissolveSoft_Alpha_Unlit_Opacity.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\softrim\Particle_softrim_add.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\Dissolve_Alpha_Additive.shader" />
+     <None Include="Assets\Particle_Dissolve_Shader\Shaders\legacy\DissolveSoft_Alpha_Additive_Opacity.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class camera : MonoBehaviour {
 
-    public Transform target;    //跟隨cube
-    public float distance = 7;  //攝影機和cube的距離
-    private Vector3 camera_position;
+    public Transform target;            //跟隨cube
+    public float distance = 0f;         //攝影機和cube的距離
+    private Vector3 camera_position;    //相機位置
+    private Vector3 camera_rotation;    //相機角度
 
     // Use this for initialization
     void Start ()
@@ -23,8 +24,10 @@ public class camera : MonoBehaviour {
     //跟隨目標
     void LateUpdate()
     {
-        camera_position = new Vector3(0, 1.5f, -distance) + target.position;
+        camera_position = new Vector3(0, 1f, -distance) + target.position;
+        camera_rotation = target.eulerAngles;
 
         transform.position = camera_position;
+        transform.eulerAngles = camera_rotation;
     }
 }

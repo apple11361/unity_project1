@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class building : MonoBehaviour {
 
-    private MeshRenderer mr;        //building外觀
+    private MeshRenderer mr;                //building外觀
 
     // Use this for initialization
     void Start ()
