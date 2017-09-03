@@ -1,7 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System.IO.Ports;
+using System.Threading;
 
 public class cube : MonoBehaviour {
 
@@ -9,9 +12,16 @@ public class cube : MonoBehaviour {
     public GameObject bullet;       //子彈
     private bool which_gun;         //選槍
     private MeshRenderer mr;        //cube外觀
-    private StreamReader sr;        //讀入移動資料
-    private StreamWriter sw;
-    private string move;     
+
+    /****************variable about com port****************/
+    const int dollar_sign = 36;         //$
+    const int carriage_return = 13;     //CR
+    const int line_feed = 10;           //LF
+
+    private bool receiving;         //decide if execute DoReceive()         
+    private SerialPort comport;
+    private Thread t;
+    
 
     // Use this for initialization
     void Start ()
@@ -22,8 +32,10 @@ public class cube : MonoBehaviour {
         mr = GetComponent<MeshRenderer>();
         mr.material.color = Color.red;
 
-        //sr = new StreamReader("move_file.txt");
-        //sw = new StreamWriter("move_file.txt");
+        /***********setting about com port***********/
+        receiving = true;
+
+        comport = new SerialPort("COM5", 9600, Parity.None, );
     }
 
     // Update is called once per frame
@@ -33,68 +45,31 @@ public class cube : MonoBehaviour {
         if (Input.GetKey(KeyCode.W))
         {
             forward(Time.deltaTime);
-            //sw.WriteLine("w");
         }
         if (Input.GetKey(KeyCode.A))
         {
             left(Time.deltaTime);
-            //sw.WriteLine("a");
         }
         if(Input.GetKey(KeyCode.S))
         {
             backward(Time.deltaTime);
-            //sw.WriteLine("s");
         }
         if(Input.GetKey(KeyCode.D))
         {
             right(Time.deltaTime);
-            //sw.WriteLine("d");
         }
         if (Input.GetKey(KeyCode.Q))
         {
             left_rotate(Time.deltaTime);
-            //sw.WriteLine("q");
         }
         if (Input.GetKey(KeyCode.E))
         {
             right_rotate(Time.deltaTime);
-            //sw.WriteLine("w");
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
             fire();
         }
-        /*if (Input.GetKey(KeyCode.Z))
-        {
-            sw.Close();
-        }*/
-
-        /*************檔案控制移動************/
-        /*move = sr.ReadLine();
-        if(move == "w")
-        {
-            forward(Time.deltaTime);
-        }
-        else if (move == "a")
-        {
-            left(Time.deltaTime);
-        }
-        else if (move == "s")
-        {
-            backward(Time.deltaTime);
-        }
-        else if (move == "d")
-        {
-            right(Time.deltaTime);
-        }
-        else if (move == "q")
-        {
-            left_rotate(Time.deltaTime);
-        }
-        else if (move == "e")
-        {
-            right_rotate(Time.deltaTime);
-        }*/
     }
 
     //前進
@@ -151,6 +126,45 @@ public class cube : MonoBehaviour {
             new_bullet.GetComponent<Rigidbody>().velocity = 70 * transform.forward - 1 * transform.right;
 
             which_gun = true;
+        }
+    }
+
+    //serial port communication for GPS
+    void DoReceive()
+    {
+        List<Byte> tempList = new List<Byte>();     //store receivedValue temporarily until CR LF
+        int receivedValue;
+
+        while (receiving)
+        {
+            if (comport.BytesToRead > 0)
+            {
+                receivedValue = comport.ReadByte();
+
+                switch (receivedValue)
+                {
+                    case dollar_sign:
+                        tempList.Clear();
+                        tempList.Add((Byte)receivedValue);
+                        break;
+
+                    case line_feed:
+                        tempList.Add((Byte)receivedValue);
+
+                        break;
+
+                    case -1:
+                        break;
+
+                    default:
+                        tempList.Add((Byte)receivedValue);
+                        break;
+                }
+            }
+            else
+            {
+                Thread.Sleep(16);
+            }
         }
     }
 }
