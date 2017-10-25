@@ -76,9 +76,6 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="MAVLink">
-      <HintPath>Assets\Plugins\MAVLink.dll</HintPath>
-    </Reference>
     <Reference Include="Emgu.CV.UI">
       <HintPath>Assets\Plugins\Emgu.CV.UI.dll</HintPath>
     </Reference>
@@ -88,8 +85,14 @@
     <Reference Include="Emgu.CV.World">
       <HintPath>Assets\Plugins\Emgu.CV.World.dll</HintPath>
     </Reference>
+    <Reference Include="MAVLink">
+      <HintPath>Assets\Plugins\MAVLink.dll</HintPath>
+    </Reference>
     <Reference Include="ZedGraph">
       <HintPath>Assets\Plugins\ZedGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>Assets\Plugins\System.Drawing.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
