@@ -1,0 +1,5 @@
+C:\MissionPlanner-master\ExtLibs\Mavlink\bin\Release\MAVLink.dll
+C:\MissionPlanner-master\ExtLibs\Mavlink\bin\Release\MAVLink.pdb
+C:\MissionPlanner-master\ExtLibs\Mavlink\obj\Release\MAVLink.csprojResolveAssemblyReference.cache
+C:\MissionPlanner-master\ExtLibs\Mavlink\obj\Release\MAVLink.dll
+C:\MissionPlanner-master\ExtLibs\Mavlink\obj\Release\MAVLink.pdb

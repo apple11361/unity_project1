@@ -1,0 +1,16 @@
+C:\MissionPlanner-master\ExtLibs\Mavlink\bin\Debug\MAVLink.dll
+C:\MissionPlanner-master\ExtLibs\Mavlink\bin\Debug\MAVLink.pdb
+C:\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\MAVLink.csprojResolveAssemblyReference.cache
+C:\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\MAVLink.dll
+C:\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\MAVLink.pdb
+F:\MissionPlanner-masterwjj\MissionPlanner-master\ExtLibs\Mavlink\bin\Debug\MAVLink.dll
+F:\MissionPlanner-masterwjj\MissionPlanner-master\ExtLibs\Mavlink\bin\Debug\MAVLink.pdb
+F:\MissionPlanner-masterwjj\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\MAVLink.dll
+F:\MissionPlanner-masterwjj\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\MAVLink.pdb
+F:\MissionPlanner-masterwjj\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\MAVLink.csprojResolveAssemblyReference.cache
+D:\MissionPlanner-master\ExtLibs\Mavlink\bin\Debug\MAVLink.dll
+D:\MissionPlanner-master\ExtLibs\Mavlink\bin\Debug\MAVLink.pdb
+D:\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\MAVLink.csprojResolveAssemblyReference.cache
+D:\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\MAVLink.csproj.CoreCompileInputs.cache
+D:\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\MAVLink.dll
+D:\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\MAVLink.pdb
